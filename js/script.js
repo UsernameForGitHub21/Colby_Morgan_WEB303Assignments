@@ -11,6 +11,9 @@ $(function () {
 
     $(document).ready(function(){
 
+        localStorage.setItem(firstLatitude, 42);
+        localStorage.setItem(firstLongitude, -82);
+
         
         //checks if their is geolocation
         //console.log(modernizr.geolocation);
@@ -19,12 +22,12 @@ $(function () {
             $('div#locationhere').html('<p>Current Latitude: ' + position.coords.latitude + '<br> Current Longitude: ' + position.coords.longitude + '</p>');
 
             //checks if local strorage exists, if it does, displays it on the page
-            if(localStorage.getItem(firstPoistion) != false){
+            if(localStorage.getItem(firstLogitude) != false && localStorage.getItem(firstLatitude) != false){
 
                 //displays last known location, welcomes back, and compares locations
-                $('div#locationhere').after('<p>Previous Latitude: ' + firstPosition.coords.latitude + '<br> Previous Longitutde: ' + firstPosition.coords.longitude + '</p>');
+                $('div#locationhere').after('<p>Previous Latitude: ' + localStorage.getItem("firstLatitude") + '<br> Previous Longitutde: ' + localStorage.getItem("firstLongitude") + '</p>');
                 $('div#locationhere').after('<h2>Weclome Back! Your previous data has been loaded!');
-                var distance = calcDistanceBetweenPoints(firstPosition.coords.latitude, firstPosition.coords.logitude, position.coords.latitude, position.coords.logitude);
+                var distance = calcDistanceBetweenPoints(localStorage.getItem("firstLatitude"), localStorage.getItem("firstLongitude"), position.coords.latitude, position.coords.logitude);
                 $('div#locationhere').after('<p>You have travelled ' + distance + 'm!</p>');
 
             } else {
@@ -32,7 +35,6 @@ $(function () {
                 $('div#locationhere').after('<h2>Welcome to the distance calculator!');
 
             }
-            localStorage.setItem(firstPosition, position);
 
         } else {
             console.log("ERROR: You must allow geolocation.")
