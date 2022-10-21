@@ -10,8 +10,10 @@ $(function () {
     //Do i have to place this in my html?
 
     $(document).ready(function(){
+
         
         //checks if their is geolocation
+        //console.log(modernizr.geolocation);
         if(modernizr.geolocation){
             //displays current location in div#locationhere
             $('div#locationhere').html('<p>Current Latitude: ' + position.coords.latitude + '<br> Current Longitude: ' + position.coords.longitude + '</p>');
