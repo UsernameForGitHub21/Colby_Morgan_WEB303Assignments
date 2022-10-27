@@ -1,25 +1,44 @@
 /*
-	WEB 303 Assignment 1 - jQuery
-	Colby Morgan 0764405
+    Assignment 05
 */
 
-$(document).ready(function(){
+$(document).ready(function () {
+    
+    class containItem{
 
-	var $Amount = 0;
-	var $Salary = 0;
-	var $Percent = 0;
+        constructor(id, name, desc, cat){
+            this.id = id;
+            this.name = name;
+            this.desc = desc;
+            this.cat = cat;
+        }
 
+        updateContentIteam(id, name, desc, cat){
+            if(this.id === id){
+                if(name != null){
+                    this.name = name;
+                }
+                if(desc != null){
+                    this.desc = desc;
+                }
+                if(cat != null){
+                    this.cat = cat;
+                }
+            }
+        }
 
-	$('input').on('change',function(){
+        toString(Item){
+            $('div#content-item-list').html('<div class="content-item-wrapper"><div class="content-iteam-' + this.id + '"><h4>' + this.name + '</h4><p>' + this.desc + '</p><div>' + this.cat + '</div></div></div>');
+        }
 
-		$Salary = $('input#yearly-salary').text();
-		$Percent = $('input#percent').text();
-		$Amount = $Salary * $Percent / 100;
-		$Amount = '$' . $Amount;
+    }
 
-		$Amount = $Amount.toFixed(2);
+    
+    sports = [soccer, basketball, golf, hockey, football];
 
-		$('span#amount').text($Amount);
-    });
+    $('div#content-item-list').html('<ul><li>' + sports[0] + '</li><li>' + sports[1] + '</li><li>' + sports[2] + '</li><li>' + sports[3] + '</li><li>' + sports[4] + '</li></ul>');
+    $('div#content-item-list').css({"border": "5px", "width": "80%", "padding": "20px", "margin-left": "auto", "margin-right": "auto", "margin-top": "10px", "margin-bottom": "10px"});
 
 });
+
+
