@@ -1,0 +1,16 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.accordion-panel {
+    display: none;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
