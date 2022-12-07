@@ -1,0 +1,71 @@
+[
+        {
+    "firstName": "Harry",
+    "lastName": "Potter",
+    "gender": "Male",
+    "actor": "Daniel Radcliffe",
+    "Alignment": "Good",
+    "roleInSchool": "Student",
+    "YearIntroduced": "First",
+    "birthDate": "1980-7-31"
+},
+{
+    "firstName": "Ron",
+    "lastName": "Weasly",
+    "gender": "Male",
+    "actor": "Rupert Grint",
+    "Alignment": "Good",
+    "roleInSchool": "Student",
+    "YearIntroduced": "First",
+    "birthDate": "1980-3-1"
+},
+{
+    "firstName": "Hermione",
+    "lastName": "Granger",
+    "gender": "Female",
+    "actor": "Emma Watson",
+    "Alignment": "Good",
+    "roleInSchool": "Student",
+    "YearIntroduced": "First",
+    "birthDate": "1979-9-19"
+},
+{
+    "firstName": "Albus",
+    "lastName": "Dumbledore",
+    "gender": "Male",
+    "actor": "Michael Gambon",
+    "Alignment": "Good",
+    "roleInSchool": "Headmaster",
+    "YearIntroduced": "First",
+    "birthDate": "18881-6-30"
+},
+{
+    "firstName": "Neville",
+    "lastName": "Longbottom",
+    "gender": "Male",
+    "actor": "Matthew Lewis",
+    "Alignment": "Good",
+    "roleInSchool": "Student",
+    "YearIntroduced": "First",
+    "birthDate": "1980-7-30"
+},
+{
+    "firstName": "Draco",
+    "lastName": "Malfoy",
+    "gender": "Male",
+    "actor": "Tom Felton",
+    "Alignment": "Evil",
+    "roleInSchool": "Student",
+    "YearIntroduced": "First",
+    "birthDate": "1980-6-5"
+},
+{
+    "firstName": "Tom",
+    "lastName": "Riddle",
+    "gender": "Male",
+    "actor": "Ralph Fiennes",
+    "Alignment": "Evil",
+    "roleInSchool": "Student",
+    "YearIntroduced": "Second",
+    "birthDate": "1926-12-31"
+}]
